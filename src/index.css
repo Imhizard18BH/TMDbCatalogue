@@ -2,79 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Override some default styles if needed */
 
+/* Global body styling */
 body {
-    background-color: #CECFC9;
-    color: gray; 
-    font-family: Arial, sans-serif;
-  }
+    @apply bg-[#CECFC9] text-gray-600 font-sans;
+}
 
+/* Modal overlay */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    @apply fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50;
 }
 
+/* Modal content */
 .modal-content {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    width: 60%;
-    max-width: 800px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    @apply bg-white rounded-lg p-5 w-[60%] max-w-[800px] relative shadow-lg;
 }
 
-
+/* Modal header */
 .modal-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    @apply flex items-start justify-between;
 }
 
+/* Modal poster */
 .modal-poster {
-    width: 120px;
-    height: 180px;
-    object-fit: cover;
-    margin-right: 20px;
+    @apply w-32 h-48 object-cover mr-5;
 }
 
+/* Modal title */
 .modal-title {
-    flex-grow: 1;
+    @apply flex-grow;
 }
 
 .modal-title h2 {
+    @apply text-2xl font-semibold;
     margin: 0;
-    font-size: 24px;
 }
 
 .modal-title p {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #555;
+    @apply mt-1 text-sm text-gray-600;
 }
 
+/* Close button */
 .close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #FF3B3F;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 18px;
+    @apply absolute top-2 right-2 bg-red-500 text-white rounded-full p-2 cursor-pointer text-lg;
 }
 
-
+/* Modal body content */
 .modal-body {
-    margin-top: 20px;
+    @apply mt-5;
 }

@@ -2,33 +2,33 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const MovieDetailsModal = ({ movie, closeModal }) => {
+   // Ensure the movie data is present before rendering
   if (!movie) return null;
 
-  // Asegurémonos de que los datos estén presentes antes de mostrarlos
   const {
     title,
     poster_path,
-    overview = 'No description available',  // Cambiado description por overview
-    vote_average = 'No rating available',  // Cambiado rating por vote_average
+    overview = 'No description available',  // Default value for overview if not available
+    vote_average = 'No rating available',  // Default value for rating if not available
     release_date = 'No release date available',
   } = movie;
 
   return (
     <motion.div
       className="modal-overlay"
-      onClick={closeModal}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.2 }}
+      onClick={closeModal} // Close modal when clicking outside of content
+      initial={{ opacity: 0 }} // Initial fade-in state
+      animate={{ opacity: 1 }} // End state (fully visible)
+      exit={{ opacity: 0 }} // Fade-out effect when closing modal
+      transition={{ duration: 0.2 }} // Smooth fade transition
     >
       <motion.div
         className="modal-content"
-        onClick={(e) => e.stopPropagation()}
-        initial={{ scale: 0.8 }}
-        animate={{ scale: 1 }}
-        exit={{ scale: 0.8 }}
-        transition={{ duration: 0.3 }}
+        onClick={(e) => e.stopPropagation()} // Prevent modal from closing when clicking inside modal content
+        initial={{ scale: 0.8 }} // Initial scale (zoom-out)
+        animate={{ scale: 1 }} // End state (normal scale)
+        exit={{ scale: 0.8 }} // Zoom-out effect when closing modal
+        transition={{ duration: 0.3 }} // Smooth scale transition
       >
     <div
       className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
@@ -46,7 +46,7 @@ const MovieDetailsModal = ({ movie, closeModal }) => {
       >
         <div className="flex items-start justify-between">
           <img
-            src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+            src={`https://image.tmdb.org/t/p/w500${poster_path}`}  // Image styling for poster
             alt={title}
             className="w-32 h-48 object-cover mr-6 rounded-md"
           />
