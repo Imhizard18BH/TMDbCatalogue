@@ -14,13 +14,13 @@ const Navbar = () => {
                 padding: 0 // Removes any default padding
             }}>
                 {/* TMDbCatalogue link */}
-                <li><a href="#" style={{ color: 'white' }}>TMDbCatalogue</a></li>
+                <li><a href="/" style={{ color: 'white' }}>TMDbCatalogue</a></li>
                 {/* Home link */}
-                <li><a href="#" style={{ color: 'white' }}>Home</a></li>
+                <li><a href="/" style={{ color: 'white' }}>Home</a></li>
                 {/* Movies link */}
-                <li><a href="#" style={{ color: 'white' }}>Movies</a></li>
+                <li><a href="/" style={{ color: 'white' }}>Movies</a></li>
                 {/* Contact link */}
-                <li><a href="#" style={{ color: 'white' }}>Contact</a></li>
+                <li><a href="/" style={{ color: 'white' }}>Contact</a></li>
             </ul>
         </nav>
     );

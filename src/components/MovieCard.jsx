@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';  // Importing Link component for navigation (though not used in this version)
 import { AiFillStar } from 'react-icons/ai';  // Importing the star icon from react-icons for rating display
 import React from 'react';
 
