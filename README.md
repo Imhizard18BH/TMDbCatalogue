@@ -87,7 +87,3 @@ You can modify the following files to customize the app:
 ## License 📝
 
 This project is open-source and available under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
-
-### Conclusion:
-This `README.md` now has various **FontAwesome** icons included for sections such as "Features", "Technologies Used", and "Customization", which help visually enhance the document. You can use these icons to make your `README.md` more engaging and user-friendly!
